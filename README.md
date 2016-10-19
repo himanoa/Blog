@@ -1,17 +1,24 @@
-# Blog
+# README
 
-Railsの喜びを知りやがって！
+This README would normally document whatever steps are necessary to get the
+application up and running.
 
-## 機能群
+Things you may want to cover:
 
-- エントリーはMarkdownで記述・編集ができる。
+* Ruby version
 
-- エントリーはCRUD可能
+* System dependencies
 
-- エントリーにタグ付けができる
+* Configuration
 
-- 全文検索ができる
+* Database creation
 
-- ダイアリー
+* Database initialization
 
-- ユーザー認証
+* How to run the test suite
+
+* Services (job queues, cache servers, search engines, etc.)
+
+* Deployment instructions
+
+* ...
