@@ -5,7 +5,7 @@ class EntryTest < ActiveSupport::TestCase
   #   assert true
   # end
   def setup
-    @user = AdminUser.first
+    @user = AdminUser.new(name: 'test', email: 'poeoe@gmail.com')
     @entries = @user.entries.build(title: 'soneyu',
                                    body_html: '人生はとてもつらい', body_md: '人生初')
   end
@@ -36,7 +36,8 @@ class EntryTest < ActiveSupport::TestCase
                                    body_html: '神です', body_md: '神です')
       entries.save
     end
-    user.destroy
-    assert_not Entry.count > 0
+    assert_difference 'Entry.count', -1 do
+      user.destroy
+    end
   end
 end
