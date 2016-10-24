@@ -1,5 +1,11 @@
 <h1>New Entry</h1>
 
-<%= render 'form', entry: @entry %>
+<%= form_for(@entry) do |f| %>
+  <%= f.label :title,"title" %>
+  <%= f.text_field :title %>
 
+  <%= f.label :body_md,"body" %>
+  <%= f.text_area :body_md %>
+  <%= f.submit "投稿" %>
+<% end %>
 <%= link_to 'Back', entries_path %>

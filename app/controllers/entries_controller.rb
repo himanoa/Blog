@@ -1,3 +1,5 @@
+require 'html/pipeline'
+
 class EntriesController < ApplicationController
   before_action :set_entry, only: [:show, :edit, :update, :destroy]
   before_action :logged_in_user, only: [:edit, :update, :destroy, :create]
@@ -25,7 +27,10 @@ class EntriesController < ApplicationController
   # POST /entries
   # POST /entries.json
   def create
-    @entry = current_user.entries.build(entry_params)
+    p = entry_params
+    markdown_filter = HTML::Pipeline::MarkdownFilter.new(p[:body_md])
+    p[:body_html] = markdown_filter.call
+    @entry = current_user.entries.build(p)
 
     respond_to do |format|
       if @entry.save
