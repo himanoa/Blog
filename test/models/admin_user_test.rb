@@ -5,7 +5,7 @@ class AdminUserTest < ActiveSupport::TestCase
   #   assert true
   # end
   def setup
-    @user = AdminUser.new(name: 'himanoa', email: 'matsunoappy@gmail.com')
+    @user = AdminUser.new(name: 'himanoa', email: 'matsunoappy@gmail.com', password:"foobar", password_confirmation: "foobar")
   end
 
   test 'should be valid' do

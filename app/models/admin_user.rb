@@ -3,4 +3,5 @@ class AdminUser < ApplicationRecord
   validates :email, presence: true, length: { maximum: 255 },
                     format: { with: /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i }
   has_many :entries, dependent: :delete_all, autosave: true
+  has_secure_password
 end

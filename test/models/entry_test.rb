@@ -5,7 +5,7 @@ class EntryTest < ActiveSupport::TestCase
   #   assert true
   # end
   def setup
-    @user = AdminUser.new(name: 'test', email: 'poeoe@gmail.com')
+    @user = AdminUser.new(name: 'test', email: 'poeoe@gmail.com', password: "poepoe", password_confirmation: "poepoe")
     @entries = @user.entries.build(title: 'soneyu',
                                    body_html: '人生はとてもつらい', body_md: '人生初')
   end
