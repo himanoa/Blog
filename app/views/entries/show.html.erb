@@ -1,19 +1,7 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @entry.title %>
-</p>
-
-<p>
-  <strong>Body html:</strong>
-  <%= @entry.body_html %>
-</p>
-
-<p>
-  <strong>Body md:</strong>
-  <%= @entry.body_md %>
-</p>
+<h1><%= @entry.title%></h1>
+<%== @entry.body_html %>
 
 <%= link_to 'Edit', edit_entry_path(@entry) %> |
 <%= link_to 'Back', entries_path %>
