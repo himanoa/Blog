@@ -28,8 +28,16 @@ class EntriesController < ApplicationController
   # POST /entries.json
   def create
     p = entry_params
-    markdown_filter = HTML::Pipeline::MarkdownFilter.new(p[:body_md])
-    p[:body_html] = markdown_filter.call
+
+    context = {
+      asset_root: "https://assets.github.com/images/icons/" 
+    }
+    mypipeline = HTML::Pipeline.new [
+      HTML::Pipeline::MarkdownFilter,
+      HTML::Pipeline::EmojiFilter
+    ], context 
+
+    p[:body_html] = mypipeline.call(p[:body_md])[:output].to_s
     @entry = current_user.entries.build(p)
 
     respond_to do |format|
