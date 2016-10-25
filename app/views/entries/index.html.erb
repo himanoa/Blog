@@ -1,5 +1,5 @@
 <div class="row entries">
-  <div class="eight columns"
+  <div class="eight columns">
     <div>
       <!-- Go to www.addthis.com/dashboard to customize your tools --> <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-580edbe828ec98ed"></script> 
       <% @entries.each do |entry| %>
@@ -17,5 +17,9 @@
         </div>
       <% end %>
     </div>
+  <%= will_paginate %>
+  </div>
+  <div class="four columns">
+     <%= render 'layouts/sidebar' %>
   </div>
 </div>

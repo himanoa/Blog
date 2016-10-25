@@ -12,7 +12,7 @@
 
 ActiveRecord::Schema.define(version: 20161024043459) do
 
-  create_table "admin_users", force: :cascade do |t|
+  create_table "admin_users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "name"
     t.string   "email"
     t.datetime "created_at",      null: false
@@ -20,13 +20,13 @@ ActiveRecord::Schema.define(version: 20161024043459) do
     t.string   "password_digest"
   end
 
-  create_table "entries", force: :cascade do |t|
+  create_table "entries", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string   "title"
-    t.text     "body_html"
-    t.text     "body_md"
+    t.text     "body_html",     limit: 65535
+    t.text     "body_md",       limit: 65535
     t.integer  "admin_user_id"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
   end
 
 end

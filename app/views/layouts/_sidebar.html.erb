@@ -1,0 +1,8 @@
+<div class="sidebar">
+  <h4>最近の投稿</h4>
+  <ul>
+  <% @entries_all.each do |entry| %>
+    <li><%= link_to entry.title, entry %></li>
+  <% end %>
+  </ul>
+</div>

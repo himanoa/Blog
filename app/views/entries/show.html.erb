@@ -1,7 +1,19 @@
 <p id="notice"><%= notice %></p>
 
-<h1><%= @entry.title%></h1>
-<%== @entry.body_html %>
-
-<%= link_to 'Edit', edit_entry_path(@entry) %> |
-<%= link_to 'Back', entries_path %>
+<div class="row entries">
+  <div class="eight columns">
+    <!-- Go to www.addthis.com/dashboard to customize your tools --> <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-580edbe828ec98ed"></script> 
+    <div class="entry">
+      <div class="title"> <%= @entry.title %></div>
+      <div class="body">
+        <%== @entry.body_html %>
+      </div>
+      <div class="footer">
+        <div class="footer-in">
+          <div class="addthis_inline_share_toolbox"></div>
+          <div>Created at: <%= @entry.created_at %></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
