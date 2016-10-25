@@ -1,27 +1,21 @@
-<p id="notice"><%= notice %></p>
-
-<h1>Entries</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Body html</th>
-      <th colspan="1"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @entries.each do |entry| %>
-      <tr>
-        <td><%= entry.title %></td>
-        <td><%= entry.body_html %></td>
-        <td><%= link_to 'Show', entry %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Entry', new_entry_path %>
+<div class="row entries">
+  <div class="eight columns"
+    <div>
+      <!-- Go to www.addthis.com/dashboard to customize your tools --> <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-580edbe828ec98ed"></script> 
+      <% @entries.each do |entry| %>
+        <div class="entry">
+          <div class="title"><%= link_to entry.title, entry %></div>
+          <div class="body">
+            <p><%= text_clamp(entry.body_md) %></p>
+          </div>
+          <div class="footer">
+            <div class="footer-in">
+              <div class="addthis_inline_share_toolbox"></div>
+              <div>Created at: <%= entry.created_at %></div>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
