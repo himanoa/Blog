@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   get 'tags/:name' => 'tag#show'
 
+  get 'entries/search' => 'entries#search'
   get 'login' => 'sessions#new'
   post 'login' => 'sessions#create'
   get 'logout' => 'sessions#destroy'

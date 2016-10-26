@@ -15,6 +15,15 @@ class EntriesController < ApplicationController
     end
   end
 
+  def search
+    unless params[:s]
+      redirect_to action: 'index'
+      return
+    end
+    @entries = Entry.search(params[:s]).records.order('created_at DESC').paginate(page: params[:page])
+    @entries_all = Entry.order('created_at DESC')
+    render 'index'
+  end
   # GET /entries/1
   # GET /entries/1.json
   def show
