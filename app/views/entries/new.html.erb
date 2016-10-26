@@ -4,6 +4,9 @@
   <%= f.label :title,"title" %>
   <%= f.text_field :title %>
 
+  <%= f.label :tag_list, "tag" %>
+  <%= text_field_tag 'entry[tag_list]', @entry.tag_list.join(',') %>
+
   <%= f.label :body_md,"body" %>
   <%= f.text_area :body_md %>
   <%= f.submit "投稿" %>

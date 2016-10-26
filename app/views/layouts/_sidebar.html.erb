@@ -1,8 +1,17 @@
 <div class="sidebar">
-  <h4>最近の投稿</h4>
+  <h4>Latest Articles</h4>
   <ul>
-  <% @entries_all.each do |entry| %>
+  <% @entries_all.limit(5).each do |entry| %>
     <li><%= link_to entry.title, entry %></li>
+  <% end %>
+  </ul>
+</div>
+
+<div class="sidebar">
+  <h4>Hash Tags</h4>
+  <ul>
+  <% ActsAsTaggableOn::Tag.most_used(10).each do |tag| %>
+    <li><%= link_to tag.name, tag_path(tag.name), class: "tag"%></li>
   <% end %>
   </ul>
 </div>

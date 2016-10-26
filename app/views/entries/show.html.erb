@@ -5,6 +5,12 @@
     <!-- Go to www.addthis.com/dashboard to customize your tools --> <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-580edbe828ec98ed"></script> 
     <div class="entry">
       <div class="title"> <%= @entry.title %></div>
+      <section class="tags">
+        <span>Tags: <span>
+        <% @entry.tag_list.each do |t| %>
+          <span class="tag"><%= link_to t, tag_path(t) %></span>
+        <% end %>
+      </section>
       <div class="body">
         <%== @entry.body_html %>
       </div>
@@ -16,4 +22,9 @@
       </div>
     </div>
   </div>
+  <div class="four columns">
+     <%= render 'layouts/sidebar' %>
+  </div>
 </div>
+
+

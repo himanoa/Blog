@@ -1,9 +1,33 @@
+.top-image {
+  border-radius: 5px;
+  display: block;
+  width: 100%;
+  height: 400px;
+}
+#black {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  opacity: 0.7;
+  background-color: black;
+  h1 {
+    margin-top: 70px;
+    color: white;
+  }
+  p {
+    color: white;
+  }
+}
 body {
   background-color:#EFF0F0;
 }
 .header {
   background-color: black;
-  border-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
   .navbar {           
     list-style: none; 
     overflow: hidden; 
@@ -37,6 +61,24 @@ body {
   background-color: white;
   border-radius: 5px;
   margin-top: 15px;
+  .tag {
+    color: gray;
+    margin-left: 3px;
+    &:hover {
+      color: lightgray;
+    }
+    a{
+      text-decoration: none;
+      color: gray;
+      &:hover {
+        color: lightgray;
+        background-color: #FFF;
+      }
+    }
+    &:before {
+      content: '#';
+    }
+  }
   pre {
     background-color: white;
   }
@@ -103,4 +145,20 @@ body {
   ul {
     list-style: none;
   }
+  a {
+    font-size: 150%; 
+    color: gray;
+    text-decoration: none;
+    &:hover{
+      background-color: #FFF;
+      color: lightgray;
+    }
+  }
+  .tag {
+    &:before {
+      content: '#';
+    }
+  }
 }
+
+

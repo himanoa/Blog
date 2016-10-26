@@ -5,4 +5,5 @@ class Entry < ApplicationRecord
   validates :body_md, presence: true
   belongs_to :admin_user
   by_star_field :created_at
+  acts_as_taggable
 end

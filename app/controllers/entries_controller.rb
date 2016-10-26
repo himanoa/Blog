@@ -14,6 +14,7 @@ class EntriesController < ApplicationController
   # GET /entries/1
   # GET /entries/1.json
   def show
+    @entries_all = Entry.order('created_at DESC')
   end
 
   # GET /entries/new
@@ -85,7 +86,7 @@ class EntriesController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def entry_params
-    params.require(:entry).permit(:title, :body_html, :body_md)
+    params.require(:entry).permit(:title, :body_html, :tag_list, :body_md)
   end
 
   def logged_in_user
