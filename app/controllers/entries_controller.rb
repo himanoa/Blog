@@ -43,7 +43,7 @@ class EntriesController < ApplicationController
       HTML::Pipeline::EmojiFilter
     ], context 
 
-    p[:body_html] = mypipeline.call(p[:body_md])[:output].to_s
+    p[:body_html] = mypipeline.call(p[:body_md])[:output]
     @entry = current_user.entries.build(p)
 
     respond_to do |format|
@@ -60,8 +60,18 @@ class EntriesController < ApplicationController
   # PATCH/PUT /entries/1
   # PATCH/PUT /entries/1.json
   def update
+    p = entry_params
+    context = {
+      asset_root: "https://assets.github.com/images/icons/" 
+    }
+    mypipeline = HTML::Pipeline.new [
+      HTML::Pipeline::MarkdownFilter,
+      HTML::Pipeline::EmojiFilter
+    ], context 
+
+    p[:body_html] = mypipeline.call(p[:body_md])[:output].to_s
     respond_to do |format|
-      if @entry.update(entry_params)
+      if @entry.update(p)
         format.html { redirect_to @entry, notice: 'Entry was successfully updated.' }
         format.json { render :show, status: :ok, location: @entry }
       else
