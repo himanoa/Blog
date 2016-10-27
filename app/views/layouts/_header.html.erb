@@ -3,5 +3,10 @@
     <li class="nav-item"> <%= link_to "About me", root_path %></li>
     <li class="nav-item"> <%= link_to "Blog", entries_path %></li>
     <li class="nav-item"> <%= link_to "Rss",  entries_path + '.rss' %></li>
+    <li class="nav-item-right">
+      <form action="/entries/search" method="get" class="search-form">
+        <input type="text" name="s" placeholder="Search"><input type="submit" value="Search" >
+      </form>
+    </li>
   </ul>
 </div>

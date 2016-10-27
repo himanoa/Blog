@@ -2,6 +2,11 @@
   <div class="eight columns">
     <div>
       <!-- Go to www.addthis.com/dashboard to customize your tools --> <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-580edbe828ec98ed"></script> 
+      <% if @entries.to_a.size == 0 %>
+        <div class="entry">
+          <p>ヒットしなかったよ</p>
+        </div>
+      <% end %>
       <% @entries.each do |entry| %>
         <div class="entry">
           <div class="title"><%= link_to entry.title, entry %></div>
