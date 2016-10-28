@@ -1,12 +1,12 @@
 require 'html/pipeline'
 
 context = {
-  :asset_root => "/Users/himanoa/src/github.com/AC3ROZ/Blog/public/images/emoji/unicode",
+  asset_root: "https://assets.github.com/images/icons/" 
 }
 mypipeline = HTML::Pipeline.new [
   HTML::Pipeline::MarkdownFilter,
   HTML::Pipeline::EmojiFilter
 ], context 
-result = mypipeline.call ":cat:"
+result = mypipeline.call "* :cat:"
 
-p result[:output].to_s
+p result.to_s

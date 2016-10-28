@@ -1,6 +1,7 @@
 require 'elasticsearch/model'
 class Entry < ApplicationRecord
   include Elasticsearch::Model
+  include Elasticsearch::Model::Callbacks
   self.per_page = 5
   validates :title, presence: true, length: { maximum: 50 }
   validates :body_html, presence: true
