@@ -25,14 +25,13 @@
 #  database: db/production.sqlite3
 
 
-
 default: &default
   adapter: mysql2
   encoding: utf8
+  host: mysql
   pool: 5
   username: root
-  password:
-  socket: /tmp/mysql.sock
+  password: otyanomitaiyo1123
 
 development:
   <<: *default
@@ -44,3 +43,7 @@ development:
 test:
   <<: *default
   database: Blog_test
+
+production: 
+  <<: *default
+  database: HimanoaBlog

@@ -1,0 +1,244 @@
+/* line 1, /Users/himanoa/src/github.com/AC3ROZ/Blog/app/assets/stylesheets/oreore.scss.erb */
+.pimg {
+  width: 98.7%;
+}
+
+/* line 4, /Users/himanoa/src/github.com/AC3ROZ/Blog/app/assets/stylesheets/oreore.scss.erb */
+.top-image {
+  border-radius: 5px;
+  display: block;
+  width: 100%;
+  height: 400px;
+}
+
+/* line 10, /Users/himanoa/src/github.com/AC3ROZ/Blog/app/assets/stylesheets/oreore.scss.erb */
+#black {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  opacity: 0.7;
+  background-color: black;
+}
+/* line 19, /Users/himanoa/src/github.com/AC3ROZ/Blog/app/assets/stylesheets/oreore.scss.erb */
+#black h1 {
+  margin-top: 70px;
+  color: white;
+}
+/* line 23, /Users/himanoa/src/github.com/AC3ROZ/Blog/app/assets/stylesheets/oreore.scss.erb */
+#black p {
+  color: white;
+}
+
+/* line 27, /Users/himanoa/src/github.com/AC3ROZ/Blog/app/assets/stylesheets/oreore.scss.erb */
+body {
+  background-color: #EFF0F0;
+}
+
+/* line 30, /Users/himanoa/src/github.com/AC3ROZ/Blog/app/assets/stylesheets/oreore.scss.erb */
+.header {
+  background-color: #242628;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+/* line 34, /Users/himanoa/src/github.com/AC3ROZ/Blog/app/assets/stylesheets/oreore.scss.erb */
+.header .navbar {
+  list-style: none;
+  overflow: hidden;
+  margin: 0px;
+}
+/* line 38, /Users/himanoa/src/github.com/AC3ROZ/Blog/app/assets/stylesheets/oreore.scss.erb */
+.header .navbar .nav-item-right {
+  height: 40px;
+  line-height: 40px;
+  float: right;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+/* line 44, /Users/himanoa/src/github.com/AC3ROZ/Blog/app/assets/stylesheets/oreore.scss.erb */
+.header .navbar .nav-item-right a {
+  text-decoration: none;
+  color: white;
+  font-size: 25px;
+}
+/* line 48, /Users/himanoa/src/github.com/AC3ROZ/Blog/app/assets/stylesheets/oreore.scss.erb */
+.header .navbar .nav-item-right a:hover {
+  background-color: transparent;
+  color: #98CF26;
+}
+/* line 54, /Users/himanoa/src/github.com/AC3ROZ/Blog/app/assets/stylesheets/oreore.scss.erb */
+.header .navbar .nav-item {
+  height: 40px;
+  line-height: 40px;
+  float: left;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+/* line 60, /Users/himanoa/src/github.com/AC3ROZ/Blog/app/assets/stylesheets/oreore.scss.erb */
+.header .navbar .nav-item a {
+  text-decoration: none;
+  color: white;
+  font-size: 25px;
+}
+/* line 64, /Users/himanoa/src/github.com/AC3ROZ/Blog/app/assets/stylesheets/oreore.scss.erb */
+.header .navbar .nav-item a:hover {
+  background-color: transparent;
+  color: #98CF26;
+}
+
+/* line 74, /Users/himanoa/src/github.com/AC3ROZ/Blog/app/assets/stylesheets/oreore.scss.erb */
+.entries {
+  margin: 20px;
+}
+
+/* line 77, /Users/himanoa/src/github.com/AC3ROZ/Blog/app/assets/stylesheets/oreore.scss.erb */
+.entry {
+  padding-left: 10px;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  background-color: white;
+  border-radius: 5px;
+  margin-top: 15px;
+}
+/* line 84, /Users/himanoa/src/github.com/AC3ROZ/Blog/app/assets/stylesheets/oreore.scss.erb */
+.entry .tag {
+  color: gray;
+  margin-left: 3px;
+}
+/* line 87, /Users/himanoa/src/github.com/AC3ROZ/Blog/app/assets/stylesheets/oreore.scss.erb */
+.entry .tag:hover {
+  color: lightgray;
+}
+/* line 90, /Users/himanoa/src/github.com/AC3ROZ/Blog/app/assets/stylesheets/oreore.scss.erb */
+.entry .tag a {
+  text-decoration: none;
+  color: gray;
+}
+/* line 93, /Users/himanoa/src/github.com/AC3ROZ/Blog/app/assets/stylesheets/oreore.scss.erb */
+.entry .tag a:hover {
+  color: lightgray;
+  background-color: #FFF;
+}
+/* line 98, /Users/himanoa/src/github.com/AC3ROZ/Blog/app/assets/stylesheets/oreore.scss.erb */
+.entry .tag:before {
+  content: '#';
+}
+/* line 102, /Users/himanoa/src/github.com/AC3ROZ/Blog/app/assets/stylesheets/oreore.scss.erb */
+.entry pre {
+  background-color: white;
+}
+/* line 105, /Users/himanoa/src/github.com/AC3ROZ/Blog/app/assets/stylesheets/oreore.scss.erb */
+.entry h1, .entry h2, .entry h3, .entry h4, .entry h5, .entry h6 {
+  font-size: 20px;
+  font-weight: normal !important;
+  letter-spacing: normal;
+}
+/* line 110, /Users/himanoa/src/github.com/AC3ROZ/Blog/app/assets/stylesheets/oreore.scss.erb */
+.entry h1 {
+  color: #1abc9c;
+  border-bottom: solid 1px #1abc9c;
+}
+/* line 114, /Users/himanoa/src/github.com/AC3ROZ/Blog/app/assets/stylesheets/oreore.scss.erb */
+.entry h2 {
+  color: #f1c40f;
+  border-bottom: solid 1px #f1c40f;
+}
+/* line 118, /Users/himanoa/src/github.com/AC3ROZ/Blog/app/assets/stylesheets/oreore.scss.erb */
+.entry h3 {
+  color: #e74c3c;
+  border-bottom: solid 1px #e74c3c;
+}
+/* line 122, /Users/himanoa/src/github.com/AC3ROZ/Blog/app/assets/stylesheets/oreore.scss.erb */
+.entry h4 {
+  color: #8e44ad;
+  border-bottom: solid 1px #8e44ad;
+}
+/* line 126, /Users/himanoa/src/github.com/AC3ROZ/Blog/app/assets/stylesheets/oreore.scss.erb */
+.entry h5 {
+  color: #34495e;
+  border-bottom: solid 1px #34495e;
+}
+/* line 130, /Users/himanoa/src/github.com/AC3ROZ/Blog/app/assets/stylesheets/oreore.scss.erb */
+.entry h6 {
+  color: #2980b9;
+  border-bottom: solid 1px #2980b9;
+}
+/* line 134, /Users/himanoa/src/github.com/AC3ROZ/Blog/app/assets/stylesheets/oreore.scss.erb */
+.entry p {
+  position: relative;
+  word-wrap: break-word !important;
+  white-space: pre-wrap !important;
+}
+/* line 139, /Users/himanoa/src/github.com/AC3ROZ/Blog/app/assets/stylesheets/oreore.scss.erb */
+.entry .title {
+  font-weight: bold;
+  font-size: 20px;
+  border-bottom: solid 2px gray;
+  margin-bottom: 10px;
+}
+/* line 144, /Users/himanoa/src/github.com/AC3ROZ/Blog/app/assets/stylesheets/oreore.scss.erb */
+.entry .title a {
+  text-decoration: none;
+}
+/* line 148, /Users/himanoa/src/github.com/AC3ROZ/Blog/app/assets/stylesheets/oreore.scss.erb */
+.entry .created_at {
+  float: right;
+}
+/* line 152, /Users/himanoa/src/github.com/AC3ROZ/Blog/app/assets/stylesheets/oreore.scss.erb */
+.entry .footer .footer-in {
+  margin-top: 10px;
+}
+
+/* line 158, /Users/himanoa/src/github.com/AC3ROZ/Blog/app/assets/stylesheets/oreore.scss.erb */
+.sidebar {
+  padding-left: 10px;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  background-color: white;
+  border-radius: 5px;
+  margin-top: 15px;
+}
+/* line 165, /Users/himanoa/src/github.com/AC3ROZ/Blog/app/assets/stylesheets/oreore.scss.erb */
+.sidebar ul {
+  list-style: none;
+}
+/* line 168, /Users/himanoa/src/github.com/AC3ROZ/Blog/app/assets/stylesheets/oreore.scss.erb */
+.sidebar a {
+  font-size: 150%;
+  color: gray;
+  text-decoration: none;
+}
+/* line 172, /Users/himanoa/src/github.com/AC3ROZ/Blog/app/assets/stylesheets/oreore.scss.erb */
+.sidebar a:hover {
+  background-color: #FFF;
+  color: lightgray;
+}
+/* line 178, /Users/himanoa/src/github.com/AC3ROZ/Blog/app/assets/stylesheets/oreore.scss.erb */
+.sidebar .tag:before {
+  content: '#';
+}
+
+/* line 185, /Users/himanoa/src/github.com/AC3ROZ/Blog/app/assets/stylesheets/oreore.scss.erb */
+.search-form input[type=text] {
+  display: inline-block;
+  margin-top: 5px;
+  border: none;
+  line-height: 40px;
+  border-radius: 0px;
+  background-color: black;
+  color: white;
+  margin-right: 0px;
+  padding-right: 0px;
+}
+/* line 196, /Users/himanoa/src/github.com/AC3ROZ/Blog/app/assets/stylesheets/oreore.scss.erb */
+.search-form input[type=submit] {
+  display: inline-block;
+  line-height: 40px;
+  border-radius: 0px;
+  background-color: black;
+  color: white;
+  border: none;
+  margin-left: 0px;
+}
